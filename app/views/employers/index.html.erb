@@ -1,2 +1,18 @@
 <h1>Employers#index</h1>
-<p>Find me in app/views/employers/index.html.erb</p>
+
+<table>
+  <tr>
+    <th>Номер</th>
+    <th>Имя</th>
+    <th>Фамилия</th>
+  </tr>
+
+  <% @employers.each do |employee| %>
+    <tr>
+      <td><%= employee.id %></td>
+      <td><%= employee.name %></td>
+      <td><%= employee.last_name %></td>
+    </tr>
+  <% end %>
+
+</table>
