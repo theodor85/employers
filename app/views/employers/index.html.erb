@@ -8,10 +8,19 @@
   </tr>
 
   <% @employers.each do |employee| %>
-    <tr>
+    <tr id="empl_<%= employee.id %>">
       <td><%= employee.id %></td>
       <td><%= employee.name %></td>
       <td><%= employee.last_name %></td>
+      <td>
+
+      <a href="#"
+        data-controller="employee"
+        data-action="click->employee#delete"
+        data-id="empl_<%= employee.id %>"
+      >Удалить</a>
+
+      </td>
     </tr>
   <% end %>
 
